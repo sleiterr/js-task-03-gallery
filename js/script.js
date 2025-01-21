@@ -1,4 +1,4 @@
-const outputGallery = document.querySelector(".output gallery");
+const outputGallery = document.querySelector(".output-gallery");
 
 const galleryImages = [
   {
@@ -45,6 +45,10 @@ const galleryImages = [
 
 galleryImages.forEach((item) => {
   outputGallery.innerHTML += `
-    <img src=${item.src}><>
+    <div class='.gallery-content'>
+    <img src=${item.src} alt='${item.title}' class='img'>
+    <h4 class='img-title'>${item.title}</h4>
+    <p class='img-subtitle'>${item.caption}</p>
+    <div>
     `;
 });
